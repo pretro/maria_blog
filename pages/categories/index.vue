@@ -1,7 +1,5 @@
 <template>
-    <div>
-categories
-    </div>
+    <PageHeader title="Category Index"/>
 </template>
 
 <script setup>
