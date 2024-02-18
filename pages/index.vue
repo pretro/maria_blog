@@ -22,21 +22,21 @@
     <section class="container py-16">
         <div class="grid sm:grid-cols-3 gap-5">
             <BlogCard
-            v-for="i in 9"
-            :key="i"
-            title="Jag har alltid drivits av en stor nyfikenhet"
-            excerpt="Journalistyrket har tagit mig till många platser i 
-            världen och till människor med olika livsvillkor. 
-            Fokus ligger på sociala frågor, men jag skriver även om annat. 
-            Till exempel betong. "
-            image="https://mariahagstrom.se/____impro/1/onewebmedia/IMG_1453.jpg?etag=%22c22b3-5e1071f1%22&sourceContentType=image%2Fjpeg&ignoreAspectRatio&resize=405%2B270&extract=88%2B52%2B300%2B200&quality=85"
-            slug="blog-1"
+            v-for="post in posts"
+            :key="post.id"
+            :title="post.title.rendered"
+            :excerpt="post.excerpt.rendered"
+            :image="post._embedded['wp:featuredmedia'][0]?.source_url"
+            :slug="post.slug"
             />
         </div>
     </section>
   </main>
 </template>
 
-<script setup></script>
+<script lang="ts" setup>
+  const { data: posts } = await useFetch<any>("https://eydie.templtrial.com/wp-json/wp/v2/posts?_embed");
+  
+</script>
 
 <style scoped></style>
