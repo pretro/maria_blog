@@ -1,11 +1,10 @@
 export default () => {
     const config = useRuntimeConfig();
-    const wpUri  = config.public.wpUri;
-    
+    const wpUri = config.public.wpUri;
+
     //get
-    const get = async (endpoint: string) =>
-        useFetch(`$(wpUri)/wp-json/wp/v2/${endpoint}`);
-    
+    const get = async (endpoint: string) => useFetch(`${wpUri}/wp-json/wp/v2/${endpoint}`);
+
     //Get All Posts
     const getPosts = async (
         categories: number,
@@ -19,10 +18,10 @@ export default () => {
         return get(query);
     };
 
-    //Get a Single  Post
-    const getPost = async (slug: string) => get(`posts?slug=${slug}$_embed`);
+    //Get a Single Post
+    const getPost = async (slug: string) => get(`posts?slug=${slug}&_embed`);
 
-    //Get All Categories
+    //Get all Categories
     const getCategories = async () => get("categories");
 
     //Get a Single Category
@@ -34,5 +33,5 @@ export default () => {
         getPost,
         getCategories,
         getCategory,
-    }
+    };
 };
