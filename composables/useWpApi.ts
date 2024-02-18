@@ -3,11 +3,11 @@ export default () => {
     const wpUri = config.public.wpUri;
 
     //get
-    const get = async (endpoint: string) => useFetch(`${wpUri}/wp-json/wp/v2/${endpoint}`);
+    const get = async <T>(endpoint: string) => useFetch<T>(`${wpUri}/wp-json/wp/v2/${endpoint}`);
 
     //Get All Posts
-    const getPosts = async (
-        categories: number,
+    const getPosts = async <T>(
+        categories?: number,
         page: number = 1,
         perPage: number = 9
     ) => {
@@ -15,7 +15,7 @@ export default () => {
         if (categories) {
             query += `&categories=${categories}`;
         }
-        return get(query);
+        return get<T>(query);
     };
 
     //Get a Single Post
