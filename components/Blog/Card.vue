@@ -11,7 +11,7 @@ defineProps<{
                 <!--Blog image-->
                 <div v-if="image" class="w-full h-[180px] relative">
                     <img :src="image" 
-                        alt="blog thumbnail" 
+                        :alt="title" 
                         class="w-full h-full absolute object-cover"
                     />
                 </div>
