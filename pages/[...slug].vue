@@ -4,7 +4,7 @@
       <!--Post Title-->
       <div class="post-title text-center mb-5">
         <h1 class="text-3xl sm:text-5xl font-bold">
-          <!-- {{ post.title.rendered }} -->
+         <!--  {{ post.title.rendered }} -->
           Hej på dig!
 
         </h1>
