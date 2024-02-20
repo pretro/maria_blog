@@ -4,9 +4,8 @@
       <!--Post Title-->
       <div class="post-title text-center mb-5">
         <h1 class="text-3xl sm:text-5xl font-bold">
-         <!--  {{ post.title.rendered }} -->
+          <!-- {{ post.title.rendered }} -->
           Hej på dig!
-
         </h1>
       </div>
       <!--Post Meta-->
@@ -16,13 +15,11 @@
 
         <!-- <span class="mr-3">Publicerad {{post.date}}</span> -->
         <span class="mr-3">Publicerad by 2024-02-14 </span>
-
       </div>
       <!--Post Image-->
       <div
         class="w-full h-[250px] sm:h-[500px] relative shadow-xl rounded overflow-hidden mb-10"
       >
-      
         <img
           src="/assets/img/maria.jpeg"
           alt="logo"
