@@ -23,7 +23,7 @@ defineProps<{
                     <p v-if="excerpt" class="text-sm mb-3">
                         {{ excerpt }}
                     </p>
-                        <NuxtLink to="/${slug}">Läs mer...</NuxtLink>
+                        <NuxtLink :to="`/${slug}`">Läs mer...</NuxtLink>
                 </div>
             </div>
 </template>

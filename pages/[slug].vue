@@ -4,31 +4,28 @@
       <!--Post Title-->
       <div class="post-title text-center mb-5">
         <h1 class="text-3xl sm:text-5xl font-bold">
-          <!-- {{ post.title.rendered }} -->
-          Hej på dig!
+          {{ post.title.rendered }}
         </h1>
       </div>
       <!--Post Meta-->
       <div class="post-meta text-center mb-10">
-        <!-- <span class="mr-3">Written by {{ post._embedded["author"].name }}</span> -->
-        <span class="mr-3">Written by Maria Hagström</span>
+        <span class="mr-3">Written by {{ post._embedded["author"].name }}</span>
 
-        <!-- <span class="mr-3">Publicerad {{post.date}}</span> -->
-        <span class="mr-3">Publicerad by 2024-02-14 </span>
+        <span class="mr-3">Publicerad {{post.date}}</span>
       </div>
       <!--Post Image-->
       <div
         class="w-full h-[250px] sm:h-[500px] relative shadow-xl rounded overflow-hidden mb-10"
       >
         <img
-          src="/assets/img/maria.jpeg"
-          alt="logo"
+        :src="post._embedded['wp:featuredmedia'][0]?.source_url"
+          :alt="post.title.rendered"
           class="absolute w-full h-full object-cover"
         />
       </div>
       <!--Post Content-->
-      <div class="post-content">Hej på dig!
-        <!-- <div v-html="post.content"></div> -->
+      <div class="post-content">
+        <div v-html="post.content.rendered"></div>
       </div>
     </section>
   </main>
