@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main >
     <PageHeader>
         <div class="w-[200px] relative h-[200px] mr-5 rounded overflow-hidden shadow-md">
           <img
@@ -20,7 +20,8 @@
     </PageHeader>
     <!--Blog grid starts-->
     <section class="container py-16">
-        <div class="grid sm:grid-cols-3 gap-5">
+      <h1 class="text-3xl font-semibold text-gray-800 my-8">Senaste inlägg</h1>
+        <div class="grid sm:grid-cols-3 gap-5 overflow-hidden bg-white shadow-lg rounded-lg">
             <BlogCard
             v-for="post in posts"
             :key="post.id"
@@ -28,10 +29,13 @@
             :excerpt="post.excerpt.rendered"
             :image="post._embedded['wp:featuredmedia'][0]?.source_url"
             :slug="post.slug"
+            class="rounded-lg"
             />
         </div>
     </section>
+    
   </main>
+  <Contact/>
 </template>
 
 <script lang="ts" setup>
