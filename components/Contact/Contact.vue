@@ -17,7 +17,7 @@
             <span>Skriv ditt meddelande...</span>
           </div>
           <div class="inputBox">
-            <input type="submit" value="Skicka" />
+            <input type="submit" value="Skicka"/>
           </div>
         </form>
       </div>
@@ -41,7 +41,7 @@
 .container{
     position: relative;
     width: 100%;
-    max-width: 800px;
+    max-width: 100%;
     margin: 20px;
     height: 600px;
     background: #122647;
@@ -71,6 +71,7 @@
 .container .formBx form .inputBox {
     position: relative;
     margin-bottom: 40px;
+    width: auto;
 }
 
 .container .formBx form .inputBox:last-child {
@@ -99,13 +100,13 @@
     background: white;
     padding: 8px 20px;
     margin-top: -10px;
-    width: 100px;
+    width: auto;
     cursor: pointer;
     background: #ff5064;
     color: white;
     font-size: 18px;
     font-weight: 400;
-    border-radius: 10%;
+    border-radius: 45%;
     text-transform: uppercase;
     letter-spacing: 4px;
 }

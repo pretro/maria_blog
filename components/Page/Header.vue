@@ -11,18 +11,9 @@
       <a href="#" class="inline-block bg-white text-gray-800 px-6 py-3 rounded-lg font-semibold transition duration-300 hover:bg-gray-300 hover:text-gray-800">Läs mer...</a>
     </div>
   </div>
-     <!-- <section class="hero bg-yellow-500 py-10">
-      <div class="container flex items-center">
-       <h1 v-if="title" class="text-4xl font-bold"> {{ title }} </h1>   
-        <slot/>
-      </div>
-    </section> -->
 </template>
 
 <script lang="ts" setup>
-   /*  defineProps<{
-        title?: string;
-    }>(); */
 </script>
 
 <style  scoped>

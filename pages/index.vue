@@ -35,7 +35,9 @@
     </section>
     
   </main>
+  <Profile/>
   <Contact/>
+  <Footer/>
 </template>
 
 <script lang="ts" setup>
